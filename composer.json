@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "bangpound/symfony-minimal",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "The \"Symfony Minimal Edition\" distribution",
     "autoload": {
         "psr-4": { "": "src/" },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
@@ -12,20 +12,22 @@
     },
     "require": {
         "php": ">=5.5.9",
-        "symfony/symfony": "3.3.x-dev",
-        "doctrine/orm": "^2.5",
-        "doctrine/doctrine-bundle": "^1.6",
-        "doctrine/doctrine-cache-bundle": "^1.2",
-        "symfony/swiftmailer-bundle": "^2.3",
+        "symfony/framework-bundle": "^3.2",
         "symfony/monolog-bundle": "^3.0",
-        "symfony/polyfill-apcu": "^1.0",
+        "symfony/polyfill-apcu": "^1.3",
+        "symfony/security-bundle": "^3.2",
+        "symfony/twig-bundle": "^3.2",
         "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "^2.0"
     },
     "require-dev": {
-        "sensio/generator-bundle": "^3.0",
-        "symfony/phpunit-bridge": "^3.0"
+        "sensio/generator-bundle": "^3.1",
+        "symfony/browser-kit": "^3.2",
+        "symfony/css-selector": "^3.2",
+        "symfony/debug-bundle": "^3.2",
+        "symfony/phpunit-bridge": "^3.2",
+        "symfony/web-profiler-bundle": "^3.2"
     },
     "scripts": {
         "symfony-scripts": [
@@ -43,11 +45,6 @@
             "@symfony-scripts"
         ]
     },
-    "config": {
-        "platform": {
-            "php": "5.5.9"
-        }
-    },
     "extra": {
         "symfony-app-dir": "app",
         "symfony-bin-dir": "bin",
@@ -57,9 +54,6 @@
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
-        },
-        "branch-alias": {
-            "dev-master": "3.3-dev"
         }
     }
 }
